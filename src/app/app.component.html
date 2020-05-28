@@ -1,29 +1,99 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+    <ion-split-pane contentId="main-content">
+        <!-- default menu | Desktop only -->
+        <ion-menu side="start" menuId="defaultMenu" contentId="main-content" class="defaultSideMenu">
+            <ion-header class="ion-no-border ion-padding">
+                <ion-toolbar>
+                    <ion-buttons class="flexItemColumn">
+                        <ion-button routerLink="/" shape="round" class="ia-small">
+                            <ion-title>IA</ion-title>
+                        </ion-button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
 
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
+            <!-- social icon-->
+            <ion-footer class="ion-no-border">
+                <ion-toolbar>
+                    <ion-list>
+                        <ion-buttons class="flexItemColumn">
+                            <ion-button href="https://github.com/easyadin" target="_blank">
+                                <ion-icon slot="icon-only" name="logo-github"></ion-icon>
+                            </ion-button>
+                            <ion-button href="https://www.linkedin.com/in/easyadin/" target="_blank">
+                                <ion-icon slot="icon-only" name="logo-linkedin"></ion-icon>
+                            </ion-button>
+                            <ion-button href="https://twitter.com/easyadin" target="_blank">
+                                <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+                            </ion-button>
+                            <ion-button href="https://api.whatsapp.com/send?phone=+971509730664" target="_blank">
+                                <ion-icon slot="icon-only" name="logo-whatsapp"></ion-icon>
+                            </ion-button>
+                            <ion-button
+                                href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Sup%20Easy%2C">
+                                <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+                            </ion-button>
+                        </ion-buttons>
+                    </ion-list>
+                </ion-toolbar>
+            </ion-footer>
+        </ion-menu>
 
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+        <!-- Contact sideMenu -->
+        <ion-menu side="start" type="overlay" menuId="contactSideMenu" contentId="main-content" swipeGesture ="true"
+            class="defaultSideMenu contactMenu">
+            <ion-header class="ion-no-border">
+                <ion-toolbar class="ion-padding">
+                    <ion-title class="ion-padding ia-large">Israel Ayokunnu</ion-title>
+                    <ion-buttons slot="primary">
+                        <ion-button (click)="closeContactMenu()">
+                            <ion-icon slot="icon-only" name="close"></ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+
+                </ion-toolbar>
+            </ion-header>
+
+
+            <div class="sideMenuContent">
+                <label>
+                    <h1>Get in Touch</h1>
+                    <p>I'm currently looking for new opportunities and i'm available immediately!</p>
+                </label>
+                <button fill="outline"
+                    onclick='window.location.href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Sup%20Easy%2C"'>Contact
+                    Me</button>
+            </div>
+            <!-- social icon-->
+            <ion-footer class="ion-no-border ion-padding">
+                <ion-toolbar class="ion-padding">
+                    <ion-list>
+                        <ion-buttons class="">
+                            <ion-button href="https://github.com/easyadin" target="_blank">
+                                <ion-icon slot="icon-only" name="logo-github"></ion-icon>
+                            </ion-button>
+                            <ion-button href="https://www.linkedin.com/in/easyadin/" target="_blank">
+                                <ion-icon slot="icon-only" name="logo-linkedin"></ion-icon>
+                            </ion-button>
+                            <ion-button href="https://twitter.com/easyadin" target="_blank">
+                                <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+                            </ion-button>
+                            <ion-button href="https://api.whatsapp.com/send?phone=+971509730664" target="_blank">
+                                <ion-icon slot="icon-only" name="logo-whatsapp"></ion-icon>
+                            </ion-button>
+                            <ion-button
+                                href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Sup%20Easy%2C">
+                                <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+                            </ion-button>
+                        </ion-buttons>
+                    </ion-list>
+                </ion-toolbar>
+            </ion-footer>
+        </ion-menu>
+
+        <!-- mobile menu-->
+
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
 </ion-app>

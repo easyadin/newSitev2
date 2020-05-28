@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "OCRA A";
+    src: url("/IA/src/assets/fonts/OCRAEXT.TTF") format("truetype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+
+$mainblue: #0099ff;
+$lightblue: rgb(204, 214, 246);
+
+.nav-link {
+    padding-right: 30px;
+    color: $lightblue;
+
+    ion-button {
+        text-transform: capitalize;
+        font-family: "OCR A";
+    }
+
+    button {
+        color: $mainblue;
+        background-color: transparent;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+        line-height: 1;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: 13px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $mainblue;
+        border-image: initial;
+        border-radius: 3px;
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+        &:hover {
+            background-color: #0099ff28;
+        }
+    }
+}
+
+.nav-link:last-child {
+    padding-right: 0;
+}
+
+.outlineColor {
+    border-color: $mainblue;
+    --border-color: #0099ff;
+    color: $mainblue;
+}
+
+.textColor {
+    color: $lightblue;
+}
+
+.topLargeText {
+    button {
+        color: $mainblue;
+        background-color: transparent;
+        font-size: 14px;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+        line-height: 1;
+        cursor: pointer;
+        margin-top: 50px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $mainblue;
+        border-image: initial;
+        border-radius: 3px;
+        padding: 1.25rem 1.75rem;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+        &:hover {
+            background-color: #0099ff28;
+        }
+    }
+}
+
+.topLargeText p:first-child {
+    color: $mainblue;
+    font-size: 25px;
+    font-family: "OCR A";
+    margin-bottom: 0;
+}
+.topLargeText label {
+    font-size: 95px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: $lightblue;
+    color: rgb(204, 214, 246);
+}
+
+.topLargeText p:nth-child(3) {
+    color: rgb(136, 146, 176);
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    max-width: 700px;
+    line-height: 30px;
+    margin-top: 25px;
+}
+
+section {
+    padding: 19%;
+    padding-top: 5%;
+    overflow: hidden;
+}
+
+.heroText {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: $lightblue;
+    font-size: 54px;
+}
+
+.parag {
+    color: rgb(136, 146, 176);
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.small_list {
+    color: rgb(136, 146, 176);
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    .flexholder {
+        display: flex;
+        flex-direction: column;
+
+        .small_list {
+            margin: 10px 70px 5px 0px;
+        }
+    }
+}
+
+footer {
+    ion-title {
+        font-family: "OCR A";
+        color: $lightblue;
+    }
+}
+
+.arrow {
+    border: solid $mainblue;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 20px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+@media (max-width: 800px) {
+    section {
+        padding: 10%;
+    }
+    .topLargeText label {
+        font-size: 60px;
+    }
+}

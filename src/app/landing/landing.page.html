@@ -1,0 +1,91 @@
+<ion-header class="ion-no-border ion-padding header">
+  <ion-toolbar class="ion-padding">
+    <ion-buttons slot="primary" class="nav-link">
+      <ion-button fill="clear"> About </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary" class="nav-link">
+      <ion-button fill="clear">Experience</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary" class="nav-link">
+      <ion-button fill="clear">Work</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary" class="nav-link">
+      <ion-button fill="clear" (click)="openContactMenu()">Contact</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary" class="nav-link">
+      <button fill="outline" class="outlineColor" (click)="onClickResume()">Resume</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mainContent">
+  <!-- big text -->
+  <section class="topLargeText">
+    <p>Hi, my name is</p>
+    <label>Israel Ayokunnu</label>
+    <p>I'm front-end developer based in UAE, Dubai. I have passion for designing and building dynamic, intuitive web
+      stuff...</p>
+    <button fill="outline"
+      onclick='window.location.href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Sup%20Easy%2C"'>Get
+      In Touch</button>
+  </section>
+
+
+  <!-- about -->
+  <section>
+    <label class="heroText">About Me</label>
+    <p class="parag">Hi there i'm Israel, you may call me easy. I'm a frontend developer based in UAE, Dubai</p>
+    <p class="parag">Some more description about me</p>
+    <p class="parag">I graduated so so and so</p>
+    <p class="parag">Some development stacks i have messed with recently includes:</p>
+
+    <div class="flexContainer">
+      <span class="flexholder">
+        <span class="small_list"> <i class="arrow right"></i>Javascript (ES6+)</span>
+        <span class="small_list"> <i class="arrow right"></i> Angular </span>
+        <span class="small_list"> <i class="arrow right"></i>Ionic Framework</span>
+      </span>
+      <span class="flexholder">
+        <span class="small_list"> <i class="arrow right"></i> HTML</span>
+        <span class="small_list"> <i class="arrow right"></i>(S)CSS</span>
+        <span class="small_list"> <i class="arrow right"></i> ASP.NET MVC</span>
+      </span>
+    </div>
+
+    <p class="parag">Design tool i use</p>
+    <div class="flexContainer">
+      <span class="flexholder">
+        <span class="small_list"> <i class="arrow right"></i> Invision Studio</span>
+        <span class="small_list"> <i class="arrow right"></i> Balsamiq </span>
+      </span>
+      <span class="flexholder">
+        <span class="small_list"><i class="arrow right"></i> AdobeXD</span>
+        <span class="small_list"><i class="arrow right"></i> Pencil & Paper</span>
+      </span>
+    </div>
+  </section>
+
+  <!-- Experience-->
+  <section>
+    <label class="heroText">Places i have worked </label>
+  </section>
+
+  <!-- Work | personal project-->
+  <section>
+    <label class="heroText">Some things i've built</label>
+  </section>
+
+  <!-- Finally | Reach out-->
+  <section>
+    <label class="heroText"></label>
+  </section>
+
+  <!-- last page-->
+  <footer>
+    <ion-toolbar>
+      <ion-title size="small" class="ion-text-center">Designed & developed by Israel Ayokunnu</ion-title>
+    </ion-toolbar>
+  </footer>
+
+
+</ion-content>
