@@ -70,24 +70,62 @@
     <label class="heroText">Places i have worked </label>
     <!-- companies -->
     <div class="companyList">
-      <button class="active" (click)="showDetails(instaval)">InstaVal</button> 
-      <button (click)="showDetails(nimbles)">Nimbles Engineering Company</button>
+      <button [ngClass]="{'active' : selectedCompany=='instaval'}" (click)="showDetails('instaval')">InstaVal</button>
+      <button [ngClass]="{'active' : selectedCompany=='nimbles'}" (click)="showDetails('nimbles')">Nimbles</button>
     </div>
-    <p class="parag">
-      Researched, designed, and Prototyped a more approachable and valuable experience on business profile for Enterprise, Startups and Scaleups as a core part of Dealflow vetting
-    </p>
-    <p class="parag">
-      Redesigned and Implemented website, Landing pages from UI concepts to deployment
-    </p>
-    <p class="parag">
-      Worked with a variety of different languages, frameworks such as Javascript, Angular, Jquery
-    </p>
-    <p class="parag">
-      Revamped UI/UX for InstaVal Fintech based application
-    </p>
-    <p class="parag">
-      Communicated and collaborated with multi-disciplinary teams of engineers, Analyst, Testers, clients, and stakeholders subsequently
-    </p>
+    <ion-list *ngIf="selectedCompany=='instaval'">
+      <ion-item>
+        <label class="blue">Frontend Developer | 2019 - Present</label>
+      </ion-item>
+      <ion-item>
+        <label class="light">
+          Researched, designed, and Prototyped a more approachable and valuable experience on business profile for
+          Enterprise, Startups and Scaleups as a core part of Dealflow vetting
+        </label>
+      </ion-item>
+      <ion-item>
+        <label class="light">
+          Redesigned and Implemented website, Landing pages from UI concepts to deployment
+        </label>
+      </ion-item>
+      <ion-item>
+        <label class="light">
+          Worked with a variety of different languages, frameworks such as Javascript, Angular, Jquery
+        </label>
+      </ion-item>
+      <ion-item>
+        <label class="light">
+          Communicated and collaborated with multi-disciplinary teams of engineers, Analyst, Testers, clients, and
+          stakeholders subsequently
+        </label>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngIf="selectedCompany=='nimbles'">
+      <ion-item>
+        <label class="blue">Web developer | 2017 - 2018</label>
+      </ion-item>
+      <ion-item>
+        <label class="light ">
+          Proposed and implemented new UI and navigation scheme for company website and vocational training platform in
+          wordpress
+        </label>
+      </ion-item>
+      <ion-item>
+        <label class="light">
+          Optimised meta description for on-page seach engine optimisation
+        </label>
+      </ion-item>
+      <ion-item>
+        <label class="light">
+          Designed portal for Bootcamp training on web development, programming, industrial automation and networking
+        </label>
+      </ion-item>
+      <ion-item>
+        <label class="light">
+          Created customised graphics, and professional designs for clients including logo design desktop UI, mobile UI, flyers, business card, mockups and protyped UI
+        </label>
+      </ion-item>
+    </ion-list>
   </section>
 
   <!-- Work | personal project-->

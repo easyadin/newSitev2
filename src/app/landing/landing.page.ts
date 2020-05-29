@@ -10,8 +10,9 @@ import { Subscription } from 'rxjs';
 })
 export class LandingPage implements OnInit {
   constructor(private siteSrv: SiteService, private menu: MenuController) { }
-  private contactMenuSub : Subscription;
+  private contactMenuSub: Subscription;
 
+  selectedCompany = 'instaval'
   ngOnInit() {
     this.scrollbarModify();
   }
@@ -21,13 +22,24 @@ export class LandingPage implements OnInit {
 
   }
 
-
+  showDetails(company) {
+    this.selectedCompany = company;
+  }
   // modify scrollbar UI
   scrollbarModify = async () => {
     const content = document.querySelector('ion-content');
     const styles = document.createElement('style');
 
     styles.textContent = `
+    main {
+      height: 100%;
+      overflow-y: scroll;
+      -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+    }
+
+    
+
     ::-webkit-scrollbar {
       width: 1px;
     }

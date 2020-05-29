@@ -66,6 +66,8 @@ $mainblue: #0099ff;
             }
         }
     }
+
+
 }
 
 .flexItemColumn {
@@ -82,3 +84,23 @@ $mainblue: #0099ff;
     backdrop-filter: blur(36px);
     -webkit-backdrop-filter: blur(36px);
 }
+
+
+@media (max-width:1400px){
+    .sideMenuContent {
+        h1 {
+            font-size: 50px!important;
+        }
+        p {
+            font-size: 20px!important;
+        }
+    }
+
+    .contactMenu {
+        .ia-large {
+            font-size: 25px;
+        }
+    }
+}
+
+
