@@ -1,11 +1,11 @@
 <ion-app>
     <ion-split-pane contentId="main-content">
-        <!-- default menu | Desktop only -->
+        <!-- Default menu | Desktop only -->
         <ion-menu side="start" menuId="defaultMenu" contentId="main-content" class="defaultSideMenu">
             <ion-header class="ion-no-border ion-padding">
                 <ion-toolbar>
                     <ion-buttons class="flexItemColumn">
-                        <ion-button routerLink="/" shape="round" class="ia-small">
+                        <ion-button  (click)="openContactMenu()" shape="round" class="ia-small">
                             <ion-title>IA</ion-title>
                         </ion-button>
                     </ion-buttons>
@@ -31,7 +31,7 @@
                                 <ion-icon slot="icon-only" name="logo-whatsapp"></ion-icon>
                             </ion-button>
                             <ion-button
-                                href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Sup%20Easy%2C">
+                                href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Dear%20Israel%2C">
                                 <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
                             </ion-button>
                         </ion-buttons>
@@ -41,7 +41,7 @@
         </ion-menu>
 
         <!-- Contact sideMenu -->
-        <ion-menu side="start" type="overlay" menuId="contactSideMenu" contentId="main-content" swipeGesture ="true"
+        <ion-menu side="start" type="overlay" menuId="contactSideMenu" contentId="main-content" swipeGesture="true"
             class="defaultSideMenu contactMenu">
             <ion-header class="ion-no-border">
                 <ion-toolbar class="ion-padding">
@@ -62,7 +62,7 @@
                     <p>I'm currently looking for new opportunities and i'm available immediately!</p>
                 </label>
                 <button fill="outline"
-                    onclick='window.location.href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Sup%20Easy%2C"'>Contact
+                    onclick='window.location.href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Dear%20Israel%2C"'>Contact
                     Me</button>
             </div>
             <!-- social icon-->
@@ -83,7 +83,7 @@
                                 <ion-icon slot="icon-only" name="logo-whatsapp"></ion-icon>
                             </ion-button>
                             <ion-button
-                                href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Sup%20Easy%2C">
+                                href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Dear%20Israel%2C">
                                 <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
                             </ion-button>
                         </ion-buttons>
@@ -92,7 +92,49 @@
             </ion-footer>
         </ion-menu>
 
-        <!-- mobile menu-->
+        <!-- Mobile menu-->
+        <ion-menu side="end" type="overlay" menuId="mobileSideMenu" contentId="main-content" swipeGesture="true"
+            class="mobileMenu">
+            <ion-header class="ion-no-border">
+                <ion-toolbar class="ion-padding">
+                    <ion-title class="ion-padding ia-large" style="visibility: hidden;">Israel Ayokunnu</ion-title>
+                    <ion-buttons slot="primary">
+                        <ion-button (click)="closeContactMenu()">
+                            <ion-icon slot="icon-only" name="close"></ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
+
+            <div class="sideMenuContent">
+
+                <ion-list>
+                    <ion-item lines="none">
+                        <ion-label>
+                            About
+                        </ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                        <ion-label>
+                            Experience
+                        </ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                        <ion-label>
+                            Work
+                        </ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                        <ion-label>
+                            Contact
+                        </ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                        <button fill="outline"> Resume</button>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ion-menu>
 
         <ion-router-outlet id="main-content"></ion-router-outlet>
     </ion-split-pane>

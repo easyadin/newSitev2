@@ -25,6 +25,12 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@font-face {
+    font-family: "OCRA A";
+    src: url("../src/assets/fonts/OCRAEXT.TTF") format("truetype");
+}
+
+
 body {
     --ion-background-color: #0a192f;
 }

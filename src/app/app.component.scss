@@ -20,7 +20,6 @@ $mainblue: #0099ff;
     background: $light-blue 0% 0% no-repeat padding-box;
     --ion-background-color: $light-blue;
 
-
     .ia-large {
         font-size: 35px;
         font-weight: 600;
@@ -38,9 +37,9 @@ $mainblue: #0099ff;
         }
 
         h1 {
-           font-size: 65px;
+            font-size: 65px;
         }
-        p{
+        p {
             font-size: 27px;
         }
 
@@ -52,7 +51,7 @@ $mainblue: #0099ff;
             line-height: 1;
             cursor: pointer;
             margin-top: 50px;
-            border-width: 1px;
+            border-width: 2px;
             border-style: solid;
             border-color: $dark-blue;
             border-image: initial;
@@ -60,14 +59,51 @@ $mainblue: #0099ff;
             padding: 1.25rem 1.75rem;
             text-decoration: none;
             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-    
+            font-weight: 700;
             &:hover {
                 background-color: #172a4526;
             }
         }
     }
+}
 
+.mobileMenu {
+    --ion-background-color: #ccd6f6;
 
+    ion-item {
+        text-align: center;
+    }
+
+    .sideMenuContent {
+        height: 100%;
+    }
+    * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "OCRA A";
+        color: $dark-blue;
+    }
+    button {
+        color: $dark-blue;
+        background-color: transparent;
+        font-size: 14px;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+        line-height: 1;
+        cursor: pointer;
+        margin: auto;
+        margin-top: 20px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $dark-blue;
+        border-image: initial;
+        border-radius: 3px;
+        padding: 1.25rem 1.75rem;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        font-weight: 700;
+        &:hover {
+            background-color: #172a4526;
+        }
+    }
 }
 
 .flexItemColumn {
@@ -85,14 +121,13 @@ $mainblue: #0099ff;
     -webkit-backdrop-filter: blur(36px);
 }
 
-
-@media (max-width:1400px){
+@media (max-width: 1400px) {
     .sideMenuContent {
         h1 {
-            font-size: 50px!important;
+            font-size: 50px !important;
         }
         p {
-            font-size: 20px!important;
+            font-size: 20px !important;
         }
     }
 
@@ -102,5 +137,3 @@ $mainblue: #0099ff;
         }
     }
 }
-
-

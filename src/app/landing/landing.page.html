@@ -18,6 +18,23 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-header class="ion-no-border mobileHeader">
+  <ion-toolbar class="">
+    <ion-title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="52" viewBox="0 0 40 52">
+        <text id="IA" transform="translate(0 42)" fill="#f8f9ff" font-size="39" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">IA</tspan></text>
+      </svg>
+    </ion-title>
+    <ion-buttons slot="primary" class="nav-link">
+      <ion-button fill="clear" (click)="openMobileMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
 <ion-content class="mainContent">
   <!-- big text -->
   <section class="topLargeText">
@@ -26,7 +43,7 @@
     <p>I'm front-end developer based in UAE, Dubai. I have passion for designing and building dynamic, intuitive web
       stuff...</p>
     <button fill="outline"
-      onclick='window.location.href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Sup%20Easy%2C"'>Get
+      onclick='window.location.href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Dear%20Israel%2C"'>Get
       In Touch</button>
   </section>
 
@@ -74,33 +91,33 @@
       <button [ngClass]="{'active' : selectedCompany=='nimbles'}" (click)="showDetails('nimbles')">Nimbles</button>
     </div>
     <ion-list *ngIf="selectedCompany=='instaval'">
-      <ion-item>
+      <ion-item lines="none">
         <label class="blue">Frontend Developer | 2019 - Present</label>
       </ion-item>
-      <ion-item>
+      <ion-item lines="none">
         <label class="light">
           Researched, designed, and Prototyped a more approachable and valuable experience on business profile for
           Enterprise, Startups and Scaleups as a core part of Dealflow vetting
         </label>
       </ion-item>
-      <ion-item>
+      <ion-item lines="none">
         <label class="light">
           Redesigned and Implemented website, Landing pages from UI concepts to deployment
         </label>
       </ion-item>
-      <ion-item>
+      <ion-item lines="none">
         <label class="light">
           Worked with a variety of different languages, frameworks such as Javascript, Angular, Jquery
         </label>
       </ion-item>
-      <ion-item>
+      <ion-item lines="none">
         <label class="light">
           Communicated and collaborated with multi-disciplinary teams of engineers, Analyst, Testers, clients, and
           stakeholders subsequently
         </label>
       </ion-item>
     </ion-list>
-    <ion-list *ngIf="selectedCompany=='nimbles'">
+    <ion-list *ngIf="selectedCompany=='nimbles'" lines="none">
       <ion-item>
         <label class="blue">Web developer | 2017 - 2018</label>
       </ion-item>

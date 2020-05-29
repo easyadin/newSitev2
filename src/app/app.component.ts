@@ -25,6 +25,9 @@ export class AppComponent implements OnInit {
 
   _shouldOpenContactMenu = false;
   private shouldOpenSub : Subscription;
+  enableBackdropDismiss = false;
+  showBackdrop = false;
+  shouldPropagate = false;
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -35,12 +38,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {  
     this.menu.enable(false, "contactSideMenu");
+    this.menu.enable(false, "mobileSideMenu")
     this.menu.enable(true, "defaultMenu");
   }
 
   ionViewWillEnter() {
     this.menu.enable(true, "defaultMenu");
     this.menu.enable(false, "contactSideMenu");
+    this.menu.enable(false, "mobileSideMenu")
   }
 
 
@@ -48,8 +53,14 @@ export class AppComponent implements OnInit {
     this.menu.enable(false, "contactSideMenu");
     this.menu.close("contactSideMenu");
     this.menu.enable(true, "defaultMenu");
+    this.menu.enable(false, "mobileSideMenu");
+    this.menu.close("mobileSideMenu");
   }
 
-
+  openContactMenu() {
+    this.menu.enable(true, "contactSideMenu");
+    this.menu.toggle("contactSideMenu")
+    // this.siteSrv.openContactMenu()
+  }
   
 }

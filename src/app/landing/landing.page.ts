@@ -74,4 +74,9 @@ export class LandingPage implements OnInit {
     // this.siteSrv.openContactMenu()
   }
 
+  openMobileMenu(){
+    this.menu.enable(true, "mobileSideMenu")
+    this.menu.open("mobileSideMenu");
+  }
+
 }
