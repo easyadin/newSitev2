@@ -1,13 +1,13 @@
 <ion-header class="ion-no-border ion-padding header">
   <ion-toolbar class="ion-padding">
     <ion-buttons slot="primary" class="nav-link">
-      <ion-button fill="clear"> About </ion-button>
+      <ion-button fill="clear" (click)="ScrollToPoint(0,'about')"> About </ion-button>
     </ion-buttons>
     <ion-buttons slot="primary" class="nav-link">
-      <ion-button fill="clear">Experience</ion-button>
+      <ion-button fill="clear" (click)="ScrollToPoint(0,'experience')">Experience</ion-button>
     </ion-buttons>
     <ion-buttons slot="primary" class="nav-link">
-      <ion-button fill="clear">Work</ion-button>
+      <ion-button fill="clear" (click)="ScrollToPoint(0,'work')">Work</ion-button>
     </ion-buttons>
     <ion-buttons slot="primary" class="nav-link">
       <ion-button fill="clear" (click)="openContactMenu()">Contact</ion-button>
@@ -22,7 +22,10 @@
   <ion-toolbar class="">
     <ion-title>
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="52" viewBox="0 0 40 52">
-        <text id="IA" transform="translate(0 42)" fill="#f8f9ff" font-size="39" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">IA</tspan></text>
+        <text id="IA" transform="translate(0 42)" fill="#f8f9ff" font-size="39" font-family="SegoeUI-Bold, Segoe UI"
+          font-weight="700">
+          <tspan x="0" y="0">IA</tspan>
+        </text>
       </svg>
     </ion-title>
     <ion-buttons slot="primary" class="nav-link">
@@ -35,7 +38,7 @@
 
 
 
-<ion-content class="mainContent">
+<ion-content class="mainContent"  [scrollEvents]="true"   (ionScroll)="logScrolling($event)">
   <!-- big text -->
   <section class="topLargeText">
     <p>Hi, my name is</p>
@@ -49,7 +52,7 @@
 
 
   <!-- about -->
-  <section>
+  <section id="about">
     <label class="heroText">About Me</label>
     <p class="parag">Hi there i'm Israel, you may call me easy. I'm a frontend developer based in UAE, Dubai</p>
     <p class="parag">Some more description about me</p>
@@ -83,7 +86,7 @@
   </section>
 
   <!-- Experience-->
-  <section>
+  <section id="experience">
     <label class="heroText">Places i have worked </label>
     <!-- companies -->
     <div class="companyList">
@@ -139,14 +142,16 @@
       </ion-item>
       <ion-item>
         <label class="light">
-          Created customised graphics, and professional designs for clients including logo design desktop UI, mobile UI, flyers, business card, mockups and protyped UI
+          Created customised graphics, and professional designs for clients including logo design desktop UI, mobile UI,
+          flyers, business card, mockups and protyped UI
         </label>
       </ion-item>
     </ion-list>
   </section>
 
   <!-- Work | personal project-->
-  <section>
+  <section id="work">
+
     <label class="heroText">Some things i've built</label>
   </section>
 
@@ -161,6 +166,4 @@
       <ion-title size="small" class="ion-text-center">Designed & developed by Israel Ayokunnu</ion-title>
     </ion-toolbar>
   </footer>
-
-
 </ion-content>

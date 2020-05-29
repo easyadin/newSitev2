@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "OCRA A";
-    src: url("/IA/src/assets/fonts/OCRAEXT.TTF") format("truetype");
-}
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 
 
 $mainblue: #0099ff;
@@ -244,6 +239,7 @@ label.light {
     }
     .topLargeText p:first-child {
         font-size: 13px;
+        font-weight: 700;
         margin-bottom: 10px;
     }
     .topLargeText p:nth-child(3) {
@@ -269,3 +265,5 @@ label.light {
         font-size: 26px;
     }
 }
+
+

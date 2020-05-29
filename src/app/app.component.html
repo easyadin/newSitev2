@@ -1,4 +1,42 @@
 <ion-app>
+    <div class="bgsvg" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="1622" height="1080" viewBox="0 0 1622 1080" class="grid">
+            <g id="Repeat_Grid_1" data-name="Repeat Grid 1" opacity="0.1">
+              <g transform="translate(-247)">
+                <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(247)" fill="#fff" stroke="#707070" stroke-width="1">
+                  <rect width="2" height="1080" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="1" height="1079" fill="none"/>
+                </g>
+              </g>
+              <g transform="translate(158)">
+                <g id="Rectangle_6-2" data-name="Rectangle 6" transform="translate(247)" fill="#fff" stroke="#707070" stroke-width="1">
+                  <rect width="2" height="1080" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="1" height="1079" fill="none"/>
+                </g>
+              </g>
+              <g transform="translate(563)">
+                <g id="Rectangle_6-3" data-name="Rectangle 6" transform="translate(247)" fill="#fff" stroke="#707070" stroke-width="1">
+                  <rect width="2" height="1080" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="1" height="1079" fill="none"/>
+                </g>
+              </g>
+              <g transform="translate(968)">
+                <g id="Rectangle_6-4" data-name="Rectangle 6" transform="translate(247)" fill="#fff" stroke="#707070" stroke-width="1">
+                  <rect width="2" height="1080" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="1" height="1079" fill="none"/>
+                </g>
+              </g>
+              <g transform="translate(1373)">
+                <g id="Rectangle_6-5" data-name="Rectangle 6" transform="translate(247)" fill="#fff" stroke="#707070" stroke-width="1">
+                  <rect width="2" height="1080" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="1" height="1079" fill="none"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+          
+      </div>
+
     <ion-split-pane contentId="main-content">
         <!-- Default menu | Desktop only -->
         <ion-menu side="start" menuId="defaultMenu" contentId="main-content" class="defaultSideMenu">
@@ -110,22 +148,22 @@
 
                 <ion-list>
                     <ion-item lines="none">
-                        <ion-label>
+                        <ion-label (click)="ScrollToPoint(0,'about')">
                             About
                         </ion-label>
                     </ion-item>
                     <ion-item lines="none">
-                        <ion-label>
+                        <ion-label (click)="ScrollToPoint(0,'experience')">
                             Experience
                         </ion-label>
                     </ion-item>
                     <ion-item lines="none">
-                        <ion-label>
+                        <ion-label (click)="ScrollToPoint(0,'work')">
                             Work
                         </ion-label>
                     </ion-item>
                     <ion-item lines="none">
-                        <ion-label>
+                        <ion-label (click)="openContactMenu()">
                             Contact
                         </ion-label>
                     </ion-item>

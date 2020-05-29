@@ -30,8 +30,15 @@
     src: url("../src/assets/fonts/OCRAEXT.TTF") format("truetype");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 
-body {
-    --ion-background-color: #0a192f;
+html {
+    // --ion-background-color: #0a192f;
+    --ion-background-color:  #0a192f;
 }
 
+body {
+    *{
+        --ion-background-color: transparent;
+    }
+}

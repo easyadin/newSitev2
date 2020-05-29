@@ -1,7 +1,8 @@
 import { SiteService } from './../services/site.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
+import { IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-landing',
@@ -11,8 +12,9 @@ import { Subscription } from 'rxjs';
 export class LandingPage implements OnInit {
   constructor(private siteSrv: SiteService, private menu: MenuController) { }
   private contactMenuSub: Subscription;
-
+  @ViewChild(IonContent, { static: false }) content: IonContent;
   selectedCompany = 'instaval'
+
   ngOnInit() {
     this.scrollbarModify();
   }
@@ -32,10 +34,7 @@ export class LandingPage implements OnInit {
 
     styles.textContent = `
     main {
-      height: 100%;
-      overflow-y: scroll;
-      -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+     
     }
 
     
@@ -79,4 +78,13 @@ export class LandingPage implements OnInit {
     this.menu.open("mobileSideMenu");
   }
 
+
+  logScrolling(event){
+    // console.log(event.detail)
+  }
+
+  ScrollToPoint(X, element) {
+    var el = document.getElementById(element);
+    this.content.scrollToPoint(X, el.offsetTop , 600);
+  }
 }
