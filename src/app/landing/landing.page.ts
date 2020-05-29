@@ -11,7 +11,7 @@ import { IonContent } from '@ionic/angular';
 })
 export class LandingPage implements OnInit {
   constructor(private siteSrv: SiteService, private menu: MenuController) { }
-  private contactMenuSub: Subscription;
+
   @ViewChild(IonContent, { static: false }) content: IonContent;
   selectedCompany = 'instaval'
 
@@ -84,6 +84,7 @@ export class LandingPage implements OnInit {
   }
 
   ScrollToPoint(X, element) {
+    console.log("asdas")
     var el = document.getElementById(element);
     this.content.scrollToPoint(X, el.offsetTop , 600);
   }
