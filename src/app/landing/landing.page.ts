@@ -1,3 +1,4 @@
+import { Work } from './../model/site.model';
 import { SiteService } from './../services/site.service';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MenuController, AnimationController } from '@ionic/angular';
@@ -11,6 +12,7 @@ import { IonContent } from '@ionic/angular';
 })
 export class LandingPage implements OnInit {
   constructor(
+    private siteService: SiteService,
     private siteSrv: SiteService,
     private menu: MenuController,
     private animationCtrl: AnimationController, ) { }
@@ -18,9 +20,13 @@ export class LandingPage implements OnInit {
   @ViewChild(IonContent, { static: false }) content: IonContent;
   selectedCompany = 'instaval'
   private scrollObserver: IntersectionObserver;
-
+  works: Work[];
+   
   ngOnInit() {
     this.scrollbarModify();
+
+    // get works
+    this.works = this.siteService.works;
   }
 
   ngAfterViewInit() {
@@ -31,7 +37,6 @@ export class LandingPage implements OnInit {
         const revealSection = this.animationCtrl.create().addElement(entries[0].target)
           .duration(1500)
           .fromTo('opacity', '0', '1');
-
         revealSection.play();
       }
       else {
@@ -64,10 +69,10 @@ export class LandingPage implements OnInit {
 
   animateText(el, duration, delay, animationType, from, to) {
     const animate = this.animationCtrl.create()
-    .addElement(document.querySelector(el))
-    .duration(duration)
-    .delay(delay)
-    .fromTo(animationType, from ,to)
+      .addElement(document.querySelector(el))
+      .duration(duration)
+      .delay(delay)
+      .fromTo(animationType, from, to)
 
     animate.play()
   }
@@ -91,10 +96,10 @@ export class LandingPage implements OnInit {
 
     styles.textContent = `
     main {
-      height: 100%;
-      overflow-y: scroll;
-      -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+      // height: 100%;
+      // overflow-y: scroll;
+      // -ms-scroll-snap-type: y mandatory;
+      // scroll-snap-type: y mandatory;
     }
 
     

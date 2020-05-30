@@ -271,3 +271,23 @@ label.light {
 * {
     transition: transform .25s
 }
+
+#work {
+    width: 100%;
+}
+
+.workImages {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    transform: translate(16px, 10px);
+    
+    ion-img {
+        width: auto;
+        height: 100%;
+           max-width: 350px;
+        max-height: 350px;
+    }
+}
