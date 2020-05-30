@@ -1,6 +1,6 @@
 import { SiteService } from './../services/site.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { MenuController, AnimationController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
 import { IonContent } from '@ionic/angular';
 
@@ -10,18 +10,55 @@ import { IonContent } from '@ionic/angular';
   styleUrls: ['./landing.page.scss'],
 })
 export class LandingPage implements OnInit {
-  constructor(private siteSrv: SiteService, private menu: MenuController) { }
+  constructor(
+    private siteSrv: SiteService,
+    private menu: MenuController,
+    private animationCtrl: AnimationController, ) { }
 
   @ViewChild(IonContent, { static: false }) content: IonContent;
   selectedCompany = 'instaval'
+  private scrollObserver: IntersectionObserver;
 
   ngOnInit() {
     this.scrollbarModify();
   }
 
+  ngAfterViewInit() {
+    //scroll animation with Intersection observer
+    this.scrollObserver = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting === true) {
+        // apply reveal section animation
+        const revealSection = this.animationCtrl.create().addElement(entries[0].target)
+          .duration(1500)
+          .fromTo('opacity', '0', '1');
+
+        revealSection.play();
+      }
+      else {
+        const revealSection = this.animationCtrl.create().addElement(entries[0].target)
+          .duration(1000)
+          .fromTo('opacity', '1', '0');
+        revealSection.play();
+      }
+    }, {
+      threshold: .1
+    });
+    const sections = document.querySelectorAll('section')
+    sections.forEach(section => {
+      this.scrollObserver.observe(section)
+    })
+
+
+  }
+
+
+
+  ngOnDestroy() {
+    this.scrollObserver.disconnect();
+  }
+
   onClickResume() {
     // get latest resume
-
   }
 
   showDetails(company) {
@@ -34,7 +71,10 @@ export class LandingPage implements OnInit {
 
     styles.textContent = `
     main {
-     
+      height: 100%;
+      overflow-y: scroll;
+      -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
     }
 
     
@@ -73,19 +113,21 @@ export class LandingPage implements OnInit {
     // this.siteSrv.openContactMenu()
   }
 
-  openMobileMenu(){
+  openMobileMenu() {
     this.menu.enable(true, "mobileSideMenu")
     this.menu.open("mobileSideMenu");
   }
 
 
-  logScrolling(event){
+  logScrolling(event) {
     // console.log(event.detail)
   }
 
   ScrollToPoint(X, element) {
     console.log("asdas")
     var el = document.getElementById(element);
-    this.content.scrollToPoint(X, el.offsetTop , 600);
+    this.content.scrollToPoint(X, el.offsetTop, 600);
   }
+
+
 }
