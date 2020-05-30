@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     this.initializeApp();
   }
 
-  
+
   @ViewChild(IonContent, { static: false }) content: IonContent;
   _shouldOpenContactMenu = false;
   private shouldOpenSub: Subscription;
@@ -49,10 +49,19 @@ export class AppComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    // apply reveal section animation
     const animateGridLine = this.animationCtrl.create().addElement(document.querySelector('.grid'))
       .duration(10000)
       .fromTo('opacity', '0', '1');
     animateGridLine.play();
+
+//default side bar
+    const revealsideBar = this.animationCtrl.create().addElement(document.querySelector('.defaultSideMenu'))
+      .duration(1000)
+      .easing('ease-out')
+      .delay(300)
+      .fromTo('transform', 'translateX(-100px)', 'translateX(0)');
+      revealsideBar.play();
   }
 
   ionViewWillEnter() {
@@ -77,7 +86,8 @@ export class AppComponent implements OnInit {
 
   ScrollToPoint(X, element) {
     var el = document.getElementById(element);
-    this.content.scrollToPoint(X, el.offsetTop , 600);
+    this.content.scrollToPoint(X, el.offsetTop, 600);
   }
+
 
 }

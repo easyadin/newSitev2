@@ -43,14 +43,34 @@ export class LandingPage implements OnInit {
     }, {
       threshold: .1
     });
-    const sections = document.querySelectorAll('section')
+    const sections = document.querySelectorAll('.sec')
     sections.forEach(section => {
       this.scrollObserver.observe(section)
     })
 
+    // animate landing text
+    // top p 
+    this.animateText('.topLargeText p:first-child', 1000, 100, 'opacity', '0', '1')
+    this.animateText('.topLargeText p:first-child', 800, 0, 'transform', 'translateY(30px)', 'translateY(0)')
 
+    this.animateText('.topLargeText label', 1000, 850, 'opacity', '0', '1')
+
+    this.animateText('.topLargeText p:nth-child(3)', 650, 850, 'transform', 'translateY(30px)', 'translateY(0)')
+    this.animateText('.topLargeText p:nth-child(3)', 1000, 1000, 'opacity', '0', '1')
+
+    this.animateText('.topLargeText button', 1000, 1500, 'opacity', '0', '1')
+    this.animateText('.topLargeText button', 800, 1000, 'transform', 'translateY(30px)', 'translateY(0)')
   }
 
+  animateText(el, duration, delay, animationType, from, to) {
+    const animate = this.animationCtrl.create()
+    .addElement(document.querySelector(el))
+    .duration(duration)
+    .delay(delay)
+    .fromTo(animationType, from ,to)
+
+    animate.play()
+  }
 
 
   ngOnDestroy() {
