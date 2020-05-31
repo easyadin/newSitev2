@@ -21,7 +21,7 @@ export class LandingPage implements OnInit {
   selectedCompany = 'instaval'
   private scrollObserver: IntersectionObserver;
   works: Work[];
-   
+  imgToShow;
   ngOnInit() {
     this.scrollbarModify();
 
@@ -154,5 +154,20 @@ export class LandingPage implements OnInit {
     this.content.scrollToPoint(X, el.offsetTop, 600);
   }
 
+  hideImage(){
+   
+  }
+  showImage(imageUrl) {
+    var el = document.querySelector('.floatingImage')
+    const animate =  this.animationCtrl.create().addElement(el)
+    .duration(300)
+    .delay(50)
+    .fromTo('transform', 'translateY(30px)', 'translateY(0)')
+    .fromTo('opacity', '0', '1')
 
+    this.imgToShow = imageUrl
+    animate.play()
+  }
+
+ 
 }

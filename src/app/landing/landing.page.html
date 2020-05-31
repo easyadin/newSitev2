@@ -157,22 +157,23 @@
       <ion-row>
         <ion-col>
           <ion-list lines="none">
-            <ion-item *ngFor="let work of works">
+            <ion-item *ngFor="let work of works" (mouseover)="showImage(work.imageUrl)">
               <ion-label>
                 <span>0{{work.id}}</span> &nbsp;&nbsp; <span>{{work.workName}}</span>
               </ion-label>
             </ion-item>
           </ion-list>
         </ion-col>
+        <ion-img [src]="imgToShow" *ngIf="imgToShow !=''" class="floatingImage"></ion-img>
         <ion-col class="workImages" size="8">
-          <ion-item *ngFor="let work of works" lines="none">
-            <ion-img [src]="work.imageUrl"></ion-img>
-            <div class="overlay">
-              <label>
-                <h2>{{work.workName}}</h2>
-                <p>{{work.workDescription}}</p>
-              </label>
-              <div class="links">
+          <ion-item *ngFor="let work of works"  lines="none" (mouseover)="showImage(work.imageUrl)" (mouseout)="hideImage()">
+            <div>
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>{{work.workName}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>{{work.workDescription}}</ion-card-content>
+                <ion-card-subtitle class="ion-padding">{{work.languageUsed}}</ion-card-subtitle>
                 <ion-buttons>
                   <ion-button href="{{work.githubRepo}}" *ngIf="work.githubRepo" target="_blank">
                     <ion-icon slot="icon-only" name="logo-github"></ion-icon>
@@ -184,9 +185,8 @@
                     <ion-icon slot="icon-only" name="pulse-outline"></ion-icon>
                   </ion-button>
                 </ion-buttons>
-              </div>
+              </ion-card>
             </div>
-           <span class="langs"> {{work.languageUsed}}</span>
           </ion-item>
         </ion-col>
       </ion-row>
