@@ -6,6 +6,7 @@ export class Work {
         public workDescription: string,
         public githubRepo: string,
         public link: string,
-        public UI: string
+        public UI: string,
+        public languageUsed: string
     ){}
 }

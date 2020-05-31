@@ -17,7 +17,8 @@ export class SiteService {
       'InstaVal webpage for marketing campaign',
       '',
       '',
-      'https://xd.adobe.com/view/8851b66b-c495-4b75-7f61-034277899258-fe60/'
+      'https://xd.adobe.com/view/8851b66b-c495-4b75-7f61-034277899258-fe60/',
+      'Html Asp.net Angular AdobeXD'
     ),
     
     new Work(
@@ -26,8 +27,9 @@ export class SiteService {
       'Mi-Pod',
       'Mi-Pod mobile description',
       '',
+      '',
       'https://projects.invisionapp.com/prototype/myPOD-ck9bmiajv00261001qabc0fln/play/e1ef9b30',
-      ''
+      'Angular MaterialDesign Firebase CustomAPI InvisionStudio'
     ),
     new Work(
       '3',
@@ -36,7 +38,8 @@ export class SiteService {
       'Hachiro High Top Sneaker  ED ELLEN DEGENERES',
       '',
       '',
-      'https://projects.invisionapp.com/prototype/ED-ELLEN-DEGENERES-HACHIRO-SNEAKER-ck0mtpukn0059wt01a6o7wzkx'
+      'https://projects.invisionapp.com/prototype/ED-ELLEN-DEGENERES-HACHIRO-SNEAKER-ck0mtpukn0059wt01a6o7wzkx',
+      'InvisionStudio'
     ),
     new Work(
       '4',
@@ -45,7 +48,8 @@ export class SiteService {
       'Portfolio for a Senior Lecturer and professor at the University of Birmingham',
       '',
       '',
-      'https://xd.adobe.com/view/69f02665-0c9c-4536-6435-1d8d8b57e8f7-1fc1/?fullscreen'
+      'https://xd.adobe.com/view/69f02665-0c9c-4536-6435-1d8d8b57e8f7-1fc1/?fullscreen',
+      'AdobeXD'
     ),
     new Work(
       '5',
@@ -54,7 +58,8 @@ export class SiteService {
       'Intent based meeting scheduler',
       '',
       '',
-      'https://projects.invisionapp.com/prototype/palschUI-ck0xpczum00bswe015eckx01m/play/679b7774'
+      'https://projects.invisionapp.com/prototype/palschUI-ck0xpczum00bswe015eckx01m/play/679b7774',
+      'InvisionStudio'
     ),
     new Work(
       '6',
@@ -64,6 +69,7 @@ export class SiteService {
       'https://github.com/easyadin/myPOD-Dashboard',
       'https://fir-pci-restapi.web.app/',
       'https://projects.invisionapp.com/prototype/myPODDashboard-ck9guixn60005py01a4hp30g8',
+      'Angular MaterialDesign Firebase CustomAPI InvisionStudio'
     ),
   ];
    

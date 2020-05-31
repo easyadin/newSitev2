@@ -165,9 +165,29 @@
           </ion-list>
         </ion-col>
         <ion-col class="workImages" size="8">
-            <ion-item *ngFor="let work of works" lines="none">
-                <ion-img [src]="work.imageUrl"></ion-img>
-            </ion-item>
+          <ion-item *ngFor="let work of works" lines="none">
+            <ion-img [src]="work.imageUrl"></ion-img>
+            <div class="overlay">
+              <label>
+                <h2>{{work.workName}}</h2>
+                <p>{{work.workDescription}}</p>
+              </label>
+              <div class="links">
+                <ion-buttons>
+                  <ion-button href="{{work.githubRepo}}" *ngIf="work.githubRepo" target="_blank">
+                    <ion-icon slot="icon-only" name="logo-github"></ion-icon>
+                  </ion-button>
+                  <ion-button href="{{work.link}}" *ngIf="work.link" target="_blank">
+                    <ion-icon slot="icon-only" name="globe-outline"></ion-icon>
+                  </ion-button>
+                  <ion-button href="{{work.UI}}" *ngIf="work.UI" target="_blank">
+                    <ion-icon slot="icon-only" name="pulse-outline"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </div>
+            </div>
+           <span class="langs"> {{work.languageUsed}}</span>
+          </ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
