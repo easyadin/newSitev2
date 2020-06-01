@@ -168,6 +168,4 @@ export class LandingPage implements OnInit {
     this.imgToShow = imageUrl
     animate.play()
   }
-
- 
 }

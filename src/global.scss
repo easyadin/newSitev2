@@ -42,3 +42,38 @@ body {
         --ion-background-color: transparent;
     }
 }
+
+
+* {
+  cursor: none;
+}
+
+
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 0.3rem;
+    background-color: #ccd6f6;
+    border-radius: 100%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+    min-width: 10px!important;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    z-index: 9999999999;
+    padding: 9px;
+}
+
+.hover-this {
+    transition: all 0.3s ease;
+}
+
+
+
+.hover-this:hover {
+    .cursor {
+        transform: translate(-50%, -50%) scale(8);
+    }
+}

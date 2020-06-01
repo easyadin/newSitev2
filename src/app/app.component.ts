@@ -1,5 +1,5 @@
 import { SiteService } from './services/site.service';
-import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef, HostListener } from '@angular/core';
 
 import { Platform, MenuController, IonContent } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -17,6 +17,7 @@ import { AnimationController } from '@ionic/angular';
 export class AppComponent implements OnInit {
 
   constructor(
+    private elRef: ElementRef,
     private animationCtrl: AnimationController,
     private menu: MenuController,
     private siteService: SiteService,
@@ -28,12 +29,15 @@ export class AppComponent implements OnInit {
   }
 
 
+
   @ViewChild(IonContent, { static: false }) content: IonContent;
   _shouldOpenContactMenu = false;
   private shouldOpenSub: Subscription;
   enableBackdropDismiss = false;
   showBackdrop = false;
   shouldPropagate = false;
+
+  cursor;
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -55,13 +59,16 @@ export class AppComponent implements OnInit {
       .fromTo('opacity', '0', '1');
     animateGridLine.play();
 
-//default side bar
+    //default side bar
     const revealsideBar = this.animationCtrl.create().addElement(document.querySelector('.defaultSideMenu'))
       .duration(1000)
       .easing('ease-out')
       .delay(300)
       .fromTo('transform', 'translateX(-100px)', 'translateX(0)');
-      revealsideBar.play();
+    revealsideBar.play();
+
+    // get cursor
+    this.cursor = this.elRef.nativeElement.querySelector('.cursor')
   }
 
   ionViewWillEnter() {
@@ -89,5 +96,11 @@ export class AppComponent implements OnInit {
     this.content.scrollToPoint(X, el.offsetTop, 600);
   }
 
+  customCursor(event) {
+    this.cursor.style.left = event.clientX + 'px'
+    this.cursor.style.top = event.clientY + 'px'
+    // console.log(event.clientY, event.clientX)
+    // console.log(this.cursor.style.top, this.cursor.style.left)
+  }
 
 }
