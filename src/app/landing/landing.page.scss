@@ -337,9 +337,8 @@ label.light {
     }
 }
 
-
-.workImages ion-item:hover + .floatingImage{
-        display: contents;
+.workImages ion-item:hover + .floatingImage {
+    display: contents;
 }
 
 @media (max-width: 800px) {
@@ -353,5 +352,15 @@ label.light {
 @media (max-width: 425px) {
     .floatingImage {
         display: none;
+    }
+}
+
+.parag a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom: 1px solid;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     }
 }

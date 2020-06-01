@@ -42,9 +42,9 @@
   <!-- big text -->
   <section class="topLargeText">
     <p>Hi, my name is</p>
-    <label>Israel Ayokunnu</label>
+    <label>Israel Ayokunnu.</label>
     <p>I'm front-end developer based in UAE, Dubai. I have passion for designing and building dynamic, intuitive web
-      stuff...</p>
+      applications.</p>
     <button fill="outline"
       onclick='window.location.href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Dear%20Israel%2C"'>Get
       In Touch</button>
@@ -54,9 +54,13 @@
   <!-- about -->
   <section id="about" class="sec">
     <label class="heroText">About Me</label>
-    <p class="parag">Hi there i'm Israel, you may call me easy. I'm a frontend developer based in UAE, Dubai</p>
-    <p class="parag">Some more description about me</p>
-    <p class="parag">I graduated so so and so</p>
+    <p class="parag">Hi there i'm Israel, you may call me easy. I'm a frontend developer based in UAE, Dubai.</p>
+    <p class="parag">I have an unquenchable passion for designing and developing web applications, websites and hybrid
+      applications.</p>
+    <p class="parag">I graduated in 2019 from <ion-text color="primary"> <a href="https://www.birmingham.ac.uk/"
+          target="_blank">University of Birmingham</a></ion-text>, joined the engineering team at <ion-text
+        color="primary"><a href="https://www.instaval.co/" target="_blank">IntaVal</a></ion-text> where i work as a
+      frontend developer on a financial technology product and service.</p>
     <p class="parag">Some development stacks i have messed with recently includes:</p>
 
     <div class="flexContainer">
@@ -77,9 +81,12 @@
       <span class="flexholder">
         <span class="small_list"> <i class="arrow right"></i> Invision Studio</span>
         <span class="small_list"> <i class="arrow right"></i> Balsamiq </span>
+        <span class="small_list"> <i class="arrow right"></i> Adobe Illustrator </span>
+
       </span>
       <span class="flexholder">
         <span class="small_list"><i class="arrow right"></i> AdobeXD</span>
+        <span class="small_list"> <i class="arrow right"></i> Adobe Photoshop </span>
         <span class="small_list"><i class="arrow right"></i> Pencil & Paper</span>
       </span>
     </div>
@@ -166,7 +173,8 @@
         </ion-col>
         <ion-img [src]="imgToShow" *ngIf="imgToShow !=''" class="floatingImage"></ion-img>
         <ion-col class="workImages" size="8">
-          <ion-item *ngFor="let work of works"  lines="none" (mouseover)="showImage(work.imageUrl)" (mouseout)="hideImage()">
+          <ion-item *ngFor="let work of works" lines="none" (mouseover)="showImage(work.imageUrl)"
+            (mouseout)="hideImage()">
             <div>
               <ion-card>
                 <ion-card-header>
