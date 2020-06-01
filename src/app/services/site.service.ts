@@ -9,6 +9,8 @@ export class SiteService {
 
   constructor() {}
 
+  private _cv = "../../assets/IsraelAyokunnu.pdf";
+
   private  _works: Work[] = [
     new Work(
       '1',
@@ -75,6 +77,10 @@ export class SiteService {
    
   get works(){
     return [...this._works];
+  }
+
+  get cv(){
+    return this._cv;
   }
 
   getWork(id: string){

@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
     // apply reveal section animation
     const animateGridLine = this.animationCtrl.create().addElement(document.querySelector('.grid'))
       .duration(10000)
-      .fromTo('opacity', '0', '1');
+      .fromTo('opacity', '0', '.5');
     animateGridLine.play();
 
     //default side bar
@@ -99,8 +99,6 @@ export class AppComponent implements OnInit {
   customCursor(event) {
     this.cursor.style.left = event.clientX + 'px'
     this.cursor.style.top = event.clientY + 'px'
-    // console.log(event.clientY, event.clientX)
-    // console.log(this.cursor.style.top, this.cursor.style.left)
   }
 
 }

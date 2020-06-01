@@ -22,11 +22,15 @@ export class LandingPage implements OnInit {
   private scrollObserver: IntersectionObserver;
   works: Work[];
   imgToShow;
+  cv;
+
   ngOnInit() {
     this.scrollbarModify();
 
     // get works
     this.works = this.siteService.works;
+    // get cv
+    this.cv = this.siteService.cv;
   }
 
   ngAfterViewInit() {
@@ -84,6 +88,7 @@ export class LandingPage implements OnInit {
 
   onClickResume() {
     // get latest resume
+   window.open(this.cv)
   }
 
   showDetails(company) {
