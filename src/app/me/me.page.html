@@ -5,12 +5,12 @@
         <!-- My name | About me | Project descripion --- goes here-->
 
         <!-- Intro-->
-        <ion-item lines="none">
+        <!-- <ion-item lines="none"> -->
           <!-- Name logo goes here -->
-          <ion-label>
+          <!-- <ion-label>
             <span class="logo">IA</span>
           </ion-label>
-        </ion-item>
+        </ion-item> -->
         <ion-item lines="none" *ngIf="selectedWork.length === 0">
           <ion-label>
             <h1>Israel Ayokunnu</h1>
@@ -22,56 +22,62 @@
         <ion-item lines="none" *ngIf="selectedWork.length === 0">
           <!-- About me -->
           <ion-label>
-            <p>Hello, i'm Israel, you may call me easy - I hope you're well</p>
+            <p>Hello, I'm Israel - you may call me easy.</p>
             <p>I'm a self taught Software Developer and i currently focus on Frontend Developement and UI-UX Design.</p>
             <p>Hit me up on
-              <ion-button fill="none"> Whatsapp</ion-button>
-              <ion-text>&</ion-text>
-              <ion-button fill="none"> LinkedIn</ion-button>
-              <ion-text> to discuss oppottunities.</ion-text>
+              <ion-button fill="none" class="whatsappColor" href="https://api.whatsapp.com/send?phone=+971509730664" target="_blank"> Whatsapp </ion-button>
+              <ion-text>& </ion-text>
+              <ion-button fill="none" class="LinkedIn" href="https://www.linkedin.com/in/easyadin/" target="_blank"> LinkedIn</ion-button>
+              <ion-text> to discuss opportunities.</ion-text>
             </p>
           </ion-label>
         </ion-item>
         <ion-item lines="none" *ngIf="selectedWork.length === 0">
           <ion-label>
-            <p> 
-              <ion-text>Currently, i work at</ion-text>
-              <ion-button fill="none">InstaVal</ion-button>
-              <ion-text> and i'm also priviledged to build a startup with a</ion-text>
-              <ion-button fill="none"> dear friend</ion-button>
-              <ion-text>at</ion-text>
-              <ion-button fill="none"> Dreams Connect.</ion-button>
+            <p>
+              Currently, i work at <span>
+                <ion-button fill="none" class="instaValColor" href="https://www.instaval.co/" target="_blank">InstaVal</ion-button>
+              </span>
+              and i'm priviledged to build a startup with a
+              <span>
+                <ion-button fill="none" href="" target="_blank"> dear friend</ion-button>
+              </span>
+              at <span>
+                <ion-button fill="none" class="dcColor" href="https://dreamsconnect.web.app/" target="_blank"> Dreams Connect.</ion-button>
+              </span>
             </p>
           </ion-label>
         </ion-item>
 
         <ion-list lines="none" *ngFor="let work of selectedWork">
           <!-- Project details-->
-        <ion-item>
-          <ion-label>
-            <!-- Project name and for whom-->
-            <h1>{{work.workName}}</h1>
-            <h1>{{work.client}}</h1>
-            <p>{{work.workDescription}}</p>
-          </ion-label>
-        </ion-item>
           <ion-item>
-            <!-- relevant links -->
-            <ion-buttons>
-              <ion-button href={{work.link}} *ngIf="work.link" target="_blank">
-                <!-- website link-->
-                <ion-icon name="globe-outline" slot="icon-only"></ion-icon>
-              </ion-button>
-              <ion-button href={{work.UI}} *ngIf="work.UI" target="_blank">
-                <!-- design prototype -->
-                <ion-icon name="pulse-outline" slot="icon-only"></ion-icon>
-              </ion-button>
-              <ion-button href={{work.githubRepo}} *ngIf="work.githubRepo" target="_blank">
-                <!-- github -->
-                <ion-icon name="logo-github" slot="icon-only"></ion-icon>
-              </ion-button>
-            </ion-buttons>
+            <ion-label>
+              <!-- Project name and for whom-->
+              <h1>{{work.workName}}</h1>
+              <h1>For {{work.client}}</h1>
+              <ion-item>
+                <!-- relevant links -->
+                <ion-buttons>
+                  <ion-button href={{work.link}} *ngIf="work.link" target="_blank">
+                    <!-- website link-->
+                    <ion-icon name="globe-outline" slot="icon-only"></ion-icon>
+                  </ion-button>
+                  <ion-button href={{work.UI}} *ngIf="work.UI" target="_blank">
+                    <!-- design prototype -->
+                    <ion-icon name="pulse-outline" slot="icon-only"></ion-icon>
+                  </ion-button>
+                  <ion-button href={{work.githubRepo}} *ngIf="work.githubRepo" target="_blank">
+                    <!-- github -->
+                    <ion-icon name="logo-github" slot="icon-only"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </ion-item>
+              <p>{{work.workDescription}}</p>
+              <p class="langUsed">{{work.languageUsed}}</p>
+            </ion-label>
           </ion-item>
+
         </ion-list>
       </ion-col>
 

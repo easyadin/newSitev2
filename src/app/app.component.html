@@ -38,6 +38,46 @@
       </div>
 
     <ion-split-pane contentId="main-content">
+        <!-- site v2 mini -->
+<ion-menu side="start" menuId="defaultMenuV2Mini" contentId="main-content" class="defaultSideMenu defaultMenuV2Mini">
+    <ion-header class="ion-no-border ion-padding">
+        <ion-toolbar>
+            <ion-buttons class="flexItemColumn">
+                <ion-button  (click)="openContactMenu()" shape="round" class="ia-small">
+                    <ion-title>IA</ion-title>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+
+    <!-- social icon-->
+    <ion-footer class="ion-no-border">
+        <ion-toolbar>
+            <ion-list>
+                <ion-buttons class="flexItemColumn">
+                    <ion-button href="https://github.com/easyadin" target="_blank">
+                        <ion-icon slot="icon-only" name="logo-github"></ion-icon>
+                    </ion-button>
+                    <ion-button href="https://www.linkedin.com/in/easyadin/" target="_blank">
+                        <ion-icon slot="icon-only" name="logo-linkedin"></ion-icon>
+                    </ion-button>
+                    <ion-button href="https://twitter.com/easyadin" target="_blank">
+                        <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+                    </ion-button>
+                    <ion-button href="https://api.whatsapp.com/send?phone=+971509730664" target="_blank">
+                        <ion-icon slot="icon-only" name="logo-whatsapp"></ion-icon>
+                    </ion-button>
+                    <ion-button
+                        href="mailto:tobiayokunnu@gmail.com?cc=palcgs@gmail.com&subject=I%20have%20an%20opportunity%20for%20you%20&body=Dear%20Israel%2C">
+                        <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-list>
+        </ion-toolbar>
+    </ion-footer>
+</ion-menu>
+
         <!-- Default menu | Desktop only -->
         <ion-menu side="start" menuId="defaultMenu" contentId="main-content" class="defaultSideMenu">
             <ion-header class="ion-no-border ion-padding">
@@ -77,6 +117,8 @@
                 </ion-toolbar>
             </ion-footer>
         </ion-menu>
+
+
 
         <!-- Contact sideMenu -->
         <ion-menu side="start" type="overlay" menuId="contactSideMenu" contentId="main-content" swipeGesture="true"

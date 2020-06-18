@@ -83,6 +83,7 @@ export class AppComponent implements OnInit {
     this.menu.close("contactSideMenu");
     this.menu.enable(true, "defaultMenu");
     this.menu.enable(false, "mobileSideMenu");
+    this.menu.enable(true, "defaultMenuV2Mini");
     this.menu.close("mobileSideMenu");
   }
 
@@ -90,7 +91,7 @@ export class AppComponent implements OnInit {
     this.menu.enable(true, "contactSideMenu");
     this.menu.toggle("contactSideMenu")
   }
-
+  
   ScrollToPoint(X, element) {
     var el = document.getElementById(element);
     this.content.scrollToPoint(X, el.offsetTop, 600);
