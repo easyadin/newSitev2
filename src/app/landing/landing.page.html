@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border ion-padding header">
+<ion-header class="ion-no-border ion-padding header" [translucent]="true">
   <ion-toolbar class="ion-padding">
     <ion-buttons slot="primary" class="nav-link">
       <ion-button fill="clear" (click)="ScrollToPoint(0,'about')"> About </ion-button>
@@ -18,7 +18,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-header class="ion-no-border mobileHeader">
+<ion-header class="ion-no-border mobileHeader" [translucent]="true">
   <ion-toolbar class="">
     <ion-title>
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="52" viewBox="0 0 40 52">
@@ -38,7 +38,7 @@
 
 
 
-<ion-content class="mainContent" [scrollEvents]="true" (ionScroll)="logScrolling($event)">
+<ion-content [fullscreen]="true" class="mainContent" [scrollEvents]="true" (ionScroll)="logScrolling($event)">
   <!-- big text -->
   <section class="topLargeText">
     <p>Hi, my name is</p>
@@ -207,7 +207,7 @@
   </section> -->
 
   <!-- last page-->
-  <footer>
+  <footer [transparent]="true">
     <ion-toolbar>
       <ion-title size="small" class="ion-text-center">Designed & developed by Israel Ayokunnu</ion-title>
     </ion-toolbar>
