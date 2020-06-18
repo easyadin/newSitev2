@@ -3,6 +3,7 @@ export class Work {
         public id: string,
         public imageUrl: string,
         public workName: string,
+        public client: string,
         public workDescription: string,
         public githubRepo: string,
         public link: string,

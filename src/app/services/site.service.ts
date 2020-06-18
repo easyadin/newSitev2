@@ -15,18 +15,31 @@ export class SiteService {
     new Work(
       '1',
       '../../assets/work/instava-campaign.PNG',
+      'Dreams Connect - Startup',
+      'Dreams Connect',
+      'Dreams ultimately strive to improve her users statusQuo by curating content that delivers values',
+      '',
+      'https://dreamsconnect.web.app/',
+      'https://xd.adobe.com/view/9f848bdd-e19f-4101-46e5-1f1f88dcc6cb-e9b5/',
+      'Angular 9+ Ionic Framework AdobeXD'
+    ),
+    new Work(
+      '1',
+      '../../assets/work/instava-campaign.PNG',
+      'InstaVal Campaign Site',
       'InstaVal',
       'InstaVal webpage for marketing campaign',
       '',
       '',
       'https://xd.adobe.com/view/8851b66b-c495-4b75-7f61-034277899258-fe60/',
-      'Html Asp.net Angular AdobeXD'
+      'Html Asp.net Angular 9+ AdobeXD'
     ),
     
     new Work(
       '2',
       '../../assets/work/mi-pod-mobile.PNG',
       'Mi-Pod',
+      'Prototype',
       'Mi-Pod mobile description',
       '',
       '',
@@ -37,16 +50,18 @@ export class SiteService {
       '3',
       '../../assets/work/hachiro.PNG',
       'ed hachiro sneaker',
+      'Prototype',
       'Hachiro High Top Sneaker  ED ELLEN DEGENERES',
       '',
       '',
-      'https://projects.invisionapp.com/prototype/ED-ELLEN-DEGENERES-HACHIRO-SNEAKER-ck0mtpukn0059wt01a6o7wzkx',
+      'https://projects.invisionapp.com/prototype/ED-ELLEN-DEGENERES-HACHIRO-SNEAKER-ck0mtpukn0059wt01a6o7wzkx/play/0fa23c61',
       'InvisionStudio'
     ),
     new Work(
       '4',
       '../../assets/work/ef.PNG',
       'Eliseo Ferrante',
+      'Prof. Eliseo Ferrante',
       'Portfolio for a Senior Lecturer and professor at the University of Birmingham',
       '',
       '',
@@ -57,6 +72,7 @@ export class SiteService {
       '5',
       '../../assets/work/palsch.PNG',
       'Palsch',
+      'Prototype',
       'Intent based meeting scheduler',
       '',
       '',
@@ -67,6 +83,7 @@ export class SiteService {
       '6',
       '../../assets/work/mi-dashboard.PNG',
       'Mi-Pod Dashboard',
+      'Prototype',
       'Mi-Pod Dashboard to manage, audio messages and podcast,air date, publish and share to the world',
       'https://github.com/easyadin/myPOD-Dashboard',
       'https://fir-pci-restapi.web.app/',

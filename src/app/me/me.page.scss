@@ -1,0 +1,137 @@
+$DarkBlueColor: #0a192f;
+
+ion-content {
+    background-color: #ffffff;
+}
+
+.hasLine {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    display: inline-block;
+    width: 70px;
+    height: 3px;
+    background-color: $DarkBlueColor;
+    margin-right: 10px;
+}
+ion-grid {
+    padding-left: 10%;
+    height: 100%;
+
+    ion-row {
+        height: 100%;
+    }
+
+    @media (max-width: 800px) {
+        padding-left: initial;
+    }
+}
+
+ion-col {
+    h1 {
+        color: #0a192f;
+        font-weight: 500;
+        font-size: 45px;
+        letter-spacing: 1px;
+        line-height: 54px;
+    }
+
+    p {
+        word-wrap: wrap;
+        white-space: normal;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        ion-button {
+            background-color: transparent;
+            --padding-start: 0px;
+            --padding-end: 0px;
+            text-transform: unset;
+            font-size: inherit;
+        }
+
+        ion-text {
+            white-space: nowrap;
+            white-space: normal;
+        }
+
+        .line {
+            width: 10px;
+            height: 2px;
+        }
+    }
+    .logo {
+        background-color: #0a192f;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.descriptionCol {
+    margin-top: 10%;
+
+    @media (max-width: 800px) {
+        margin-top: initial;
+    }
+}
+
+.projectListCol {
+    padding-top: 10%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    ion-label {
+        background-color: #ffffff;
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 370px;
+        max-height: 370px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow:
+        0 0px 5.7px -7px rgba(0, 0, 0, 0.13),
+        0 0px 14.5px -7px rgba(0, 0, 0, 0.019),
+        0 0px 29.6px -7px rgba(0, 0, 0, 0.02),
+        0 0px 61px -7px rgba(0, 0, 0, 0.032),
+        0 0px 167px -7px rgba(0, 0, 0, 0.04)
+      ;
+      
+      
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 100%;
+        }
+
+        &:nth-child(odd){
+            margin-top: 4%;
+            margin-right: -20px;
+        }
+        &:nth-child(even) {
+            margin-top: -18%;
+        }
+        &:last-child {
+            margin-top: -20%;
+        }
+    }
+}

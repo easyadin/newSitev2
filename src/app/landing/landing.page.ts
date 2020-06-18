@@ -13,7 +13,6 @@ import { IonContent } from '@ionic/angular';
 export class LandingPage implements OnInit {
   constructor(
     private siteService: SiteService,
-    private siteSrv: SiteService,
     private menu: MenuController,
     private animationCtrl: AnimationController, ) { }
 
