@@ -70,7 +70,6 @@ ion-col {
             width: 10px;
             height: 2px;
         }
-       
     }
 
     .logo {
@@ -85,11 +84,10 @@ ion-col {
     }
 }
 .langUsed {
-        justify-content: space-between;
-        font-size: 16px!important;
-        font-weight: 600;
-        color: dimgrey;
-   
+    justify-content: space-between;
+    font-size: 16px !important;
+    font-weight: 600;
+    color: dimgrey;
 }
 .descriptionCol {
     margin-top: 10%;
@@ -110,6 +108,11 @@ ion-col {
     justify-content: flex-end;
 
     ion-label {
+        transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-delay: .1s;
+      
+     
+
         background-color: #ffffff;
         display: block;
         width: 100%;
@@ -143,8 +146,6 @@ ion-col {
             margin-top: -20%;
         }
     }
-
-    
 }
 
 .whatsappColor {
@@ -165,4 +166,23 @@ ion-col {
 
 .defaultSideMenu {
     background-color: #ffffff !important;
+}
+
+ion-label.active {
+    transition:.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-delay: .1s;
+
+    border-radius: 0px !important;
+    z-index: 99999;
+    max-width: 40% !important;
+    margin-top: 0 !important;
+    position: fixed;
+    flex-direction: column;
+    max-height: 100% !important;
+    margin-right: 5px!important;
+    top: 0;
+    right: 0;
+    img {
+        border-radius: 0 !important;
+    }
 }

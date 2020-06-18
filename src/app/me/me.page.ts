@@ -15,9 +15,9 @@ export class MePage implements OnInit {
   works: Work[];
   cv;
   selectedWork: Work[] = [];
-
+  workClicked;
+    
   ngOnInit() {
-
     // get works
     this.works = this.siteService.works;
     // get cv
@@ -27,6 +27,15 @@ export class MePage implements OnInit {
   onClickWork(work) {
     this.selectedWork.pop() // remove content
     this.selectedWork.push(work) // add new content
+    this.workClicked = work.id
+  }
+
+  revertback(e) {
+    e.preventDefault()
+    e.stopPropagation()
+    this.selectedWork.pop();
+    this.workClicked = 
+    console.log(this.selectedWork)
   }
 
   ionViewWillEnter() {

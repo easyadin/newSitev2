@@ -24,7 +24,7 @@ export class SiteService {
       'Angular 9+ Ionic Framework AdobeXD'
     ),
     new Work(
-      '1',
+      '2',
       '../../assets/work/instava-campaign.PNG',
       'InstaVal Campaign Site',
       'InstaVal',
@@ -36,7 +36,7 @@ export class SiteService {
     ),
     
     new Work(
-      '2',
+      '3',
       '../../assets/work/mi-pod-mobile.PNG',
       'Mi-Pod',
       'Prototype',
@@ -47,7 +47,7 @@ export class SiteService {
       'Angular MaterialDesign Firebase CustomAPI InvisionStudio'
     ),
     new Work(
-      '3',
+      '4',
       '../../assets/work/hachiro.PNG',
       'ed hachiro sneaker',
       'Prototype',
@@ -58,7 +58,7 @@ export class SiteService {
       'InvisionStudio'
     ),
     new Work(
-      '4',
+      '5',
       '../../assets/work/ef.PNG',
       'Eliseo Ferrante',
       'Prof. Eliseo Ferrante',
@@ -69,7 +69,7 @@ export class SiteService {
       'AdobeXD'
     ),
     new Work(
-      '5',
+      '6',
       '../../assets/work/palsch.PNG',
       'Palsch',
       'Prototype',
@@ -80,7 +80,7 @@ export class SiteService {
       'InvisionStudio'
     ),
     new Work(
-      '6',
+      '7',
       '../../assets/work/mi-dashboard.PNG',
       'Mi-Pod Dashboard',
       'Prototype',
