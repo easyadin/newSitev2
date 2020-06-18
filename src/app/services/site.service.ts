@@ -14,7 +14,7 @@ export class SiteService {
   private  _works: Work[] = [
     new Work(
       '1',
-      '../../assets/work/instava-campaign.PNG',
+      '../../assets/work/dc.PNG',
       'Dreams Connect - Startup',
       'Dreams Connect',
       'Dreams ultimately strive to improve her users statusQuo by curating content that delivers values',
