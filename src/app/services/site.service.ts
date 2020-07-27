@@ -7,11 +7,121 @@ import { Subject } from 'rxjs';
 })
 export class SiteService {
 
-  constructor() {}
+  constructor() { }
 
   private _cv = "../../assets/IsraelAyokunnu.pdf";
 
-  private  _works: Work[] = [
+  private _works: Work[] = [
+    new Work(
+      '8',
+      '../../assets/work/colorwine.png',
+      'Color Wine - Shop',
+      'Angular Ecommerce - Shop',
+      'Beautiful wine landing Created in Angular framework with Ionic UI Framework',
+      '',
+      'https://colorwine.web.app/',
+      'https://xd.adobe.com/view/58eb829f-c225-4cc9-bb18-dc1a926566d1-0db8/',
+      'Angular Ionic (S)CSS AdobeXD'
+    ),
+    new Work(
+      '9',
+      '../../assets/work/flatfashion.png',
+      'Flat Fashion - Shop',
+      'Angular Ecommerce - Shop',
+      'Clothing store landing page with sleek animation',
+      '',
+      'https://flatfashion.web.app/home',
+      'https://xd.adobe.com/view/6214f3c4-f004-49d9-b955-383705615c51-3747/',
+      'Angular Ionic (S)CSS AdobeXD'
+    ),
+    new Work(
+      '10',
+      '../../assets/work/wearkit.png',
+      'Wear Kit Fashion store - Shop',
+      'Angular Ecommerce - Shop',
+      'Clothing store landing page with sleek animation clothing theme',
+      '',
+      'https://wearkit.web.app/home',
+      'https://xd.adobe.com/view/ebab85bb-5784-45d6-b6ca-7614180d6683-bef8/',
+      'Angular Ionic (S)CSS AdobeXD'
+    ),
+    new Work(
+      '11',
+      '../../assets/work/wetsuite.png',
+      'Wet Suite Kit - Shop',
+      'Angular Ecommerce - Shop',
+      'Unisex wetsuite landing page',
+      '',
+      'https://wearkit.web.app/home',
+      'https://xd.adobe.com/view/7d4e37c5-4f75-4672-a10f-1f033a663a85-281d/',
+      'Angular Ionic (S)CSS AdobeXD'
+    ),
+    new Work(
+      '12',
+      '../../assets/work/razerheadphone.png',
+      '3D model landing page for Razer kraken headphone',
+      'Angular Ecommerce - Shop',
+      'Interact with headphone in realtime',
+      '',
+      'https://razerheadphones.web.app/',
+      'https://xd.adobe.com/view/4b0d2ae7-6746-42b3-adbe-f3fade269d94-1e5e/',
+      'Angular Ionic Three.js (S)CSS AdobeXD'
+    ),
+    new Work(
+      '13',
+      '../../assets/work/airmax.png',
+      'Realistic 3D model landing page for Airmax',
+      'Angular Ecommerce - Shop',
+      'Airmax Airmax Airmax',
+      '',
+      'https://airmax.web.app/home',
+      'https://xd.adobe.com/view/e8c0a154-42b4-4611-9b80-d4ed7335d275-bd93/',
+      'Angular Ionic (S)CSS AdobeXD'
+    ),
+    new Work(
+      '14',
+      '../../assets/work/robochat.png',
+      'Realtime messaging app',
+      'Prototype developed for Roboads.com',
+      'Uses Firebase, AngularFire as backend and Authentication',
+      '',
+      'robochatt.web.app',
+      'https://xd.adobe.com/view/531b4b8d-a3f1-4e99-a346-f01c7e6fd655-0648/',
+      'Angular Ionic (S)CSS AdobeXD Firebase AngularFire'
+    ),
+    new Work(
+      '15',
+      '../../assets/work/rivahouses.png',
+      'Real Estate Landing page',
+      'UI design for Riva-houses',
+      'Uses Firebase, AngularFire as backend and Authentication',
+      '',
+      '',
+      'https://xd.adobe.com/view/cb278544-f238-4efa-b499-6604716fe024-9e74/',
+      'Angular Ionic (S)CSS AdobeXD Firebase AngularFire'
+    ),
+    new Work(
+      '16',
+      '../../assets/work/meekd.png',
+      'Meekd Search engine',
+      'UI design proposal for Meekd search engine',
+      '',
+      '',
+      '',
+      'https://xd.adobe.com/view/531b4b8d-a3f1-4e99-a346-f01c7e6fd655-0648/',
+      'AdobeXD'
+    ),
+    new Work(
+      '17',
+      '../../assets/work/coza.png',
+      'Coza Global Mobile App',
+      'UI design, web and mobile application with Livestream etc',
+      '',
+      '',
+      'https://cozaglobal.web.app/',
+      'https://xd.adobe.com/view/4e1fc936-8c24-4ab8-a87d-35bc844c7cf0-1b4c/',
+      'Angular Ionic (S)CSS AdobeXD Firebase AngularFire'
+    ),
     new Work(
       '1',
       '../../assets/work/dc.PNG',
@@ -34,7 +144,7 @@ export class SiteService {
       'https://xd.adobe.com/view/8851b66b-c495-4b75-7f61-034277899258-fe60/',
       'Html Asp.net Angular 9+ AdobeXD'
     ),
-    
+
     new Work(
       '3',
       '../../assets/work/mi-pod-mobile.PNG',
@@ -91,17 +201,17 @@ export class SiteService {
       'Angular MaterialDesign Firebase CustomAPI InvisionStudio'
     ),
   ];
-   
-  get works(){
+
+  get works() {
     return [...this._works];
   }
 
-  get cv(){
+  get cv() {
     return this._cv;
   }
 
-  getWork(id: string){
-    return {...this._works.find(work => work.id === id)};
+  getWork(id: string) {
+    return { ...this._works.find(work => work.id === id) };
   }
 
 

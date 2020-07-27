@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "easy-2f5e6"
+  },
+  "targets": {
+    "easy-2f5e6": {
+      "hosting": {
+        "israel": [
+          "israel"
+        ]
+      }
+    }
+  }
+}

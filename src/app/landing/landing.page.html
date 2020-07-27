@@ -162,7 +162,7 @@
 
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col size-lg="4" size-sm="12">
           <ion-list lines="none">
             <ion-item *ngFor="let work of works" (mouseover)="showImage(work.imageUrl)">
               <ion-label>
@@ -171,8 +171,10 @@
             </ion-item>
           </ion-list>
         </ion-col>
+
         <ion-img [src]="imgToShow" *ngIf="imgToShow !=''" class="floatingImage"></ion-img>
-        <ion-col class="workImages" size="8">
+        
+        <ion-col class="workImages" size-lg="8" size-sm="12">
           <ion-item *ngFor="let work of works" lines="none" (mouseover)="showImage(work.imageUrl)"
             (mouseout)="hideImage()">
             <div>

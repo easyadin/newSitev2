@@ -59,7 +59,7 @@
             <ion-label>
               <!-- Project name and for whom-->
               <h1>{{work.workName}}</h1>
-              <h1>For {{work.client}}</h1>
+              <h1> {{work.client}}</h1>
               <ion-item>
                 <!-- relevant links -->
                 <ion-buttons>
@@ -104,7 +104,9 @@
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
+         <ion-content class="imgContainer">
           <img [src]="work.imageUrl">
+         </ion-content>
          <ion-footer class="hideOnDestop" *ngIf="work.id === workClicked">
           <ion-item lines="none" class="mobileDescrip" *ngIf="work.id === workClicked">
             <ion-label>

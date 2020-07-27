@@ -266,6 +266,10 @@ p {
     ion-label.active {
         max-width: 100% !important;
         border-radius: 0px !important;
+        overflow: auto;
+        img {
+            max-height: auto;
+        }
     }
 
     .projectListCol {
@@ -319,4 +323,14 @@ p {
     .hideOnDestop {
         display: block;
     }
+}
+
+.imgContainer {
+    background-color: transparent;
+    overflow: hidden;
+    --overflow: hidden;
+}
+
+* {
+    white-space: normal;
 }
