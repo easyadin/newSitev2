@@ -13,6 +13,17 @@ export class SiteService {
 
   private _works: Work[] = [
     new Work(
+      '18',
+      '../../assets/work/carmart.png',
+      'Carmart - Vehicle Rental',
+      'Configure vehicle to preference and rent',
+      'Super responsive web application for vehicle rental',
+      '',
+      'https://carmart.web.app/',
+      'https://xd.adobe.com/view/0e840a00-d938-4fb9-8f94-7a2f0d3f903d-5bd7/',
+      'Angular Ionic (S)CSS AdobeXD'
+    ),
+    new Work(
       '8',
       '../../assets/work/colorwine.png',
       'Color Wine - Shop',
@@ -52,7 +63,7 @@ export class SiteService {
       'Angular Ecommerce - Shop',
       'Unisex wetsuite landing page',
       '',
-      'https://wearkit.web.app/home',
+      'https://wetsuite.web.app/',
       'https://xd.adobe.com/view/7d4e37c5-4f75-4672-a10f-1f033a663a85-281d/',
       'Angular Ionic (S)CSS AdobeXD'
     ),
@@ -85,7 +96,7 @@ export class SiteService {
       'Prototype developed for Roboads.com',
       'Uses Firebase, AngularFire as backend and Authentication',
       '',
-      'robochatt.web.app',
+      'https://robochatt.web.app/',
       'https://xd.adobe.com/view/531b4b8d-a3f1-4e99-a346-f01c7e6fd655-0648/',
       'Angular Ionic (S)CSS AdobeXD Firebase AngularFire'
     ),

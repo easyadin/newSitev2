@@ -63,17 +63,20 @@
               <ion-item>
                 <!-- relevant links -->
                 <ion-buttons>
-                  <ion-button href={{work.link}} *ngIf="work.link" target="_blank">
+                  <ion-button href={{work.link}} *ngIf="work.link" target="_blank" color="primary">
                     <!-- website link-->
-                    <ion-icon name="globe-outline" slot="icon-only"></ion-icon>
+                    <!-- <ion-icon name="globe-outline" slot="icon-only"></ion-icon> -->
+                    Live Website
                   </ion-button>
-                  <ion-button href={{work.UI}} *ngIf="work.UI" target="_blank">
+                  <ion-button href={{work.UI}} *ngIf="work.UI" target="_blank" color="success">
                     <!-- design prototype -->
-                    <ion-icon name="pulse-outline" slot="icon-only"></ion-icon>
+                    <!-- <ion-icon name="pulse-outline" slot="icon-only"></ion-icon> -->
+                    UI Design
                   </ion-button>
-                  <ion-button href={{work.githubRepo}} *ngIf="work.githubRepo" target="_blank">
+                  <ion-button href={{work.githubRepo}} *ngIf="work.githubRepo" target="_blank" color="warning">
                     <!-- github -->
-                    <ion-icon name="logo-github" slot="icon-only"></ion-icon>
+                    <!-- <ion-icon name="logo-github" slot="icon-only"></ion-icon> -->
+                    Source Code
                   </ion-button>
                 </ion-buttons>
               </ion-item>
@@ -104,38 +107,41 @@
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
-         <ion-content class="imgContainer">
-          <img [src]="work.imageUrl">
-         </ion-content>
-         <ion-footer class="hideOnDestop" *ngIf="work.id === workClicked">
-          <ion-item lines="none" class="mobileDescrip" *ngIf="work.id === workClicked">
-            <ion-label>
-              <p>{{work.workDescription}}</p>
-            </ion-label>
-          </ion-item>
-          <ion-item lines="none">
-            <!-- relevant links -->
-            <ion-buttons>
-              <ion-button href={{work.link}} *ngIf="work.link" target="_blank">
-                <!-- website link-->
-                <ion-icon name="globe-outline" slot="icon-only"></ion-icon>
-              </ion-button>
-              <ion-button href={{work.UI}} *ngIf="work.UI" target="_blank">
-                <!-- design prototype -->
-                <ion-icon name="pulse-outline" slot="icon-only"></ion-icon>
-              </ion-button>
-              <ion-button href={{work.githubRepo}} *ngIf="work.githubRepo" target="_blank">
-                <!-- github -->
-                <ion-icon name="logo-github" slot="icon-only"></ion-icon>
-              </ion-button>
-            </ion-buttons>
-          </ion-item>
-          <ion-item lines="none" class="mobileDescrip">
-            <ion-label>
-              <p>{{work.languageUsed}}</p>
-            </ion-label>
-          </ion-item>
-         </ion-footer>
+          <ion-content class="imgContainer">
+            <img [src]="work.imageUrl">
+          </ion-content>
+          <ion-footer class="hideOnDestop" *ngIf="work.id === workClicked">
+            <ion-item lines="none" class="mobileDescrip" *ngIf="work.id === workClicked">
+              <ion-label>
+                <p>{{work.workDescription}}</p>
+              </ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <!-- relevant links -->
+              <ion-buttons>
+                <ion-button href={{work.link}} *ngIf="work.link" target="_blank" color="primary">
+                  <!-- website link-->
+                  <!-- <ion-icon name="globe-outline" slot="icon-only"></ion-icon> -->
+                  Live Website
+                </ion-button>
+                <ion-button href={{work.UI}} *ngIf="work.UI" target="_blank" color="success">
+                  <!-- design prototype -->
+                  <!-- <ion-icon name="pulse-outline" slot="icon-only"></ion-icon> -->
+                  UI Design
+                </ion-button>
+                <ion-button href={{work.githubRepo}} *ngIf="work.githubRepo" target="_blank" color="warning">
+                  <!-- github -->
+                  <!-- <ion-icon name="logo-github" slot="icon-only"></ion-icon> -->
+                  Source Code
+                </ion-button>
+              </ion-buttons>
+            </ion-item>
+            <ion-item lines="none" class="mobileDescrip">
+              <ion-label>
+                <p>{{work.languageUsed}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-footer>
         </ion-label>
       </ion-col>
     </ion-row>
